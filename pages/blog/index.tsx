@@ -5,7 +5,9 @@ import {BlogPosts} from '../../data/blog-metadata';
 const BlogIndex: NextPage = () => {
   return <>
     <div>posts!</div>
-    {BlogPosts.map((post) => {
+    {BlogPosts.sort((a, b) => {
+      return a.publishDate < b.publishDate ? 1 : -1;
+    }).map((post) => {
       return <div>
         <Link href={`blog/${post.slug}`}>{post.title}</Link>
       </div>;
