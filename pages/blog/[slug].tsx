@@ -1,7 +1,8 @@
-import BlogPost from '../../components/blog';
-
 import {useRouter} from 'next/router';
 import type {NextPage} from 'next';
+
+import BlogPost from '../../components/blog';
+
 
 const BlogPage: NextPage = () => {
   const router = useRouter();

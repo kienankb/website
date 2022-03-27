@@ -1,8 +1,9 @@
+import ErrorPage from 'next/error';
+import Head from 'next/head';
+
 import {BlogPosts, BlogMetadata} from "../data/blog-metadata";
 import Layout from './layout';
 
-import ErrorPage from 'next/error';
-import Head from 'next/head';
 
 const getBlogPostDataFromSlug = (slug: string | undefined): BlogMetadata | undefined => {
   return BlogPosts.find((postData: BlogMetadata) => postData.slug === slug);

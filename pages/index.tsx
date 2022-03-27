@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css';
 
 import Layout from '../components/layout';
 
+
 const Home: NextPage = () => {
   return (
     <div className={styles.container}>

@@ -1,5 +1,6 @@
 import * as PostContents from '../blog-content';
 
+
 export interface BlogMetadata {
   slug: string;
   title: string;

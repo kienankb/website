@@ -1,6 +1,8 @@
 import type {NextPage} from 'next';
 import Link from 'next/link';
+
 import {BlogPosts} from '../../data/blog-metadata';
+
 
 const BlogIndex: NextPage = () => {
   return <>
