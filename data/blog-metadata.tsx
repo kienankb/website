@@ -1,13 +1,13 @@
 import * as PostContents from '../blog-content';
 
-export interface BlogMapping {
+export interface BlogMetadata {
   slug: string;
   title: string;
   publishDate: Date;
   content: JSX.Element;
 }
 
-export const BlogPosts: BlogMapping[] = [
+export const BlogPosts: BlogMetadata[] = [
   {
     slug: 'minimalist-lighting',
     title: 'Minimalist Lighting',
