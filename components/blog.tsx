@@ -22,7 +22,12 @@ const BlogPost = ({slug}: BlogPostProps) => {
     <Head>
       <title>{postMetadata?.title}</title>
     </Head>
-    <Layout><div>{postMetadata?.content}</div></Layout>
+    <Layout>
+      <>
+        <h1>{postMetadata?.title}</h1>
+        {postMetadata?.content}
+      </>
+    </Layout>
   </>);
 }
 
