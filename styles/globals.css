@@ -18,6 +18,11 @@
   src: url('/fonts/Lora-Regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: Bitter;
+  src: url('/fonts/Bitter-VariableFont_wght.ttf') format('truetype');
+}
+
 html,
 body {
   padding: 0;
@@ -35,8 +40,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 body, p {
-  font-family: 'Lora';
-  line-height: 175%;
+  font-family: 'Bitter';
+  line-height: 200%;
+}
+
+p {
+  width: 700px;
 }
 
 * {
