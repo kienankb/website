@@ -22,6 +22,8 @@ html,
 body {
   padding: 0;
   margin: 0;
+  color: #dddddd;
+  background-color: #202020;
 }
 
 a {
@@ -34,6 +36,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body, p {
   font-family: 'Lora';
+  line-height: 175%;
 }
 
 * {
