@@ -32,6 +32,7 @@ body {
 }
 
 a {
+  color: unset;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -41,7 +42,7 @@ h1, h2, h3, h4, h5, h6 {
 
 body, p {
   font-family: 'Bitter';
-  line-height: 200%;
+  /* line-height: 200%; */
 }
 
 p {
@@ -50,4 +51,34 @@ p {
 
 * {
   box-sizing: border-box;
+}
+
+.constructionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.constructionTitle {
+  font-family: 'Staatliches';
+  font-size: 64px;
+  text-align: center;
+}
+
+.constructionSubtitle {
+  font-family: 'Staatliches';
+  font-size: 42px;
+  text-align: center;
+}
+
+.constructionSubSubtitle {
+  font-family: 'Staatliches';
+  font-size: 24px;
+  text-align: center;
+}
+
+.constructionSubSubSubtitle {
+  font-family: 'Staatliches';
+  font-size: 12px;
+  text-align: center;
 }
