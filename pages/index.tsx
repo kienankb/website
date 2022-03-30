@@ -19,7 +19,7 @@ const Home: NextPage = () => {
         <div className='constructionTitle'>⚠️hardhat required⚠️</div>
         <div className='constructionSubtitle'>this website is under construction.</div>
         <div className='constructionSubtitle'>keep hands and feet inside the browser window at all times.</div>
-        <div className='constructionSubSubtitle'>if you're interested in tracking my progress or silently/loudly judging my code, check it out <a href='https://github.com/kienankb/website'>on github</a>.</div>
+        <div className='constructionSubSubtitle'>interested in tracking my progress or silently/loudly judging my code? check it out <a href='https://github.com/kienankb/website'>on github</a>.</div>
         <div className='constructionSubSubSubtitle'>please judge it silently.</div>
       </div>
     </div>
