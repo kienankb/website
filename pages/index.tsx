@@ -16,7 +16,7 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='constructionContainer'>
-        <div className='constructionTitle'>⚠️hardhat required⚠️</div>
+        <div className='constructionDomTitle'>⚠️hardhat required⚠️</div>
         <div className='constructionSubtitle'>this website is under construction.</div>
         <div className='constructionSubtitle'>keep hands and feet inside the browser window at all times.</div>
         <div className='constructionSubSubtitle'>interested in tracking my progress or silently/loudly judging my code? check it out <a href='https://github.com/kienankb/website'>on github</a>.</div>
