@@ -18,10 +18,15 @@ type LayoutProps = {
   children: JSX.Element,
 };
 
+// note: it is the responsibility of `children` to include a
+//  <Head> tag to properly set metadata
+
 const Layout = ({children}: LayoutProps) => {
   return (<>
     <NavBar />
-    {children}
+    <div>
+      {children}
+    </div>
   </>);
 };
     

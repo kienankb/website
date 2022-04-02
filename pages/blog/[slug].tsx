@@ -2,6 +2,7 @@ import {useRouter} from 'next/router';
 import type {NextPage} from 'next';
 
 import BlogPost from '../../components/blog';
+import Layout from '../../components/layout';
 
 
 const BlogPage: NextPage = () => {
@@ -9,7 +10,9 @@ const BlogPage: NextPage = () => {
   let {slug} = router.query;
   // avoid the slug being an array
   slug = Array.isArray(slug) ? undefined : slug;
-  return <BlogPost slug={slug} />;
+  return <Layout>
+    <BlogPost slug={slug} />
+  </Layout>;
 }
 
 export default BlogPage;
