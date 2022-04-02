@@ -1,7 +1,9 @@
 import ErrorPage from 'next/error';
 import Head from 'next/head';
 
-import {BlogPosts, BlogMetadata} from "../data/blog-metadata";
+import {BlogPosts, BlogMetadata} from '../data/blog-metadata';
+
+import styles from './styles/BlogPost.module.css';
 
 
 const getBlogPostDataFromSlug = (slug: string | undefined): BlogMetadata | undefined => {
@@ -21,8 +23,10 @@ const BlogPost = ({slug}: BlogPostProps) => {
     <Head>
       <title>{postMetadata?.title}</title>
     </Head>
-    <h1>{postMetadata?.title}</h1>
-    {postMetadata?.content}
+    <div className={styles.content}>
+      <h1>{postMetadata?.title}</h1>
+      {postMetadata?.content}
+    </div>
   </>);
 }
 
