@@ -1,16 +1,15 @@
-@font-face {
-  font-family: 'Arvo';
-  src: url('/fonts/Arvo-Regular.ttf') format('truetype');
-}
+/* header/display fonts */
 
 @font-face {
   font-family: 'Staatliches';
   src: url('/fonts/Staatliches-Regular.ttf') format('truetype');
 }
 
+/* serif fonts */
+
 @font-face {
-  font-family: 'JosefinSans';
-  src: url('/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+  font-family: 'Arvo';
+  src: url('/fonts/Arvo-Regular.ttf') format('truetype');
 }
 
 @font-face {
@@ -21,6 +20,18 @@
 @font-face {
   font-family: Bitter;
   src: url('/fonts/Bitter-VariableFont_wght.ttf') format('truetype');
+}
+
+/* sans-serif fonts */
+
+@font-face {
+  font-family: 'JosefinSans';
+  src: url('/fonts/JosefinSans-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Rubik;
+  src: url('/fonts/Rubik-VariableFont_wght.ttf') format('truetype');
 }
 
 :root {
@@ -48,13 +59,13 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Staatliches';
+  font-family: 'Rubik';
   font-weight: 400;
 }
 
 body, p {
   font-family: 'Bitter';
-  /* line-height: 200%; */
+  line-height: 200%;
 }
 
 p {
@@ -63,6 +74,10 @@ p {
 
 * {
   box-sizing: border-box;
+}
+
+.nav {
+  font-family: 'Rubik';
 }
 
 .constructionContainer {
