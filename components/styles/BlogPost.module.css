@@ -13,3 +13,11 @@
 .content p {
   line-height: 200%;
 }
+
+.content h1 {
+  font-family: 'Staatliches';
+}
+
+.content hr {
+  border: 1px dashed var(--fg);
+}
