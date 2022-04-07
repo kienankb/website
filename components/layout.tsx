@@ -24,7 +24,7 @@ type LayoutProps = {
 const Layout = ({children}: LayoutProps) => {
   return (<>
     <NavBar />
-    <div>
+    <div className='mainColumnContent'>
       {children}
     </div>
   </>);
