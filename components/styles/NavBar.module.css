@@ -1,0 +1,10 @@
+.nav {
+  display: flex;
+  width: 200px;
+}
+
+.nav a {
+  font-family: 'Rubik';
+  flex-grow: 1;
+  text-decoration: none;
+}

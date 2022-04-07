@@ -1,15 +1,18 @@
 import Link from 'next/link';
 
+import styles from './styles/NavBar.module.css';
+
 
 const NavBar = () => {
   return (
     <>
-      <div className='nav'>
-        <Link href="/">home</Link>
-      </div>
-      <div className='nav'>
-        <Link href="/blog">blog</Link>
-      </div>
+      <h1>kienan</h1>
+      <nav className={styles.nav}>
+          <Link href="/"><a>home</a></Link>
+          <Link href="/blog"><a>blog</a></Link>
+          <Link href="/about"><a>about</a></Link>
+          <Link href="/dont"><a>contact</a></Link>
+      </nav>
     </>
   );
 }
