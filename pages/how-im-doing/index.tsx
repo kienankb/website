@@ -7,16 +7,14 @@ const HowImDoing: NextPage = () => {
   const {readRemoteFile} = usePapaParse();
 
   const handleReadRemoteFile = () => {
-    readRemoteFile('/data/days.csv', {
+    readRemoteFile('/data/days-fixed.csv', {
       header: true,
       download: true,
       skipEmptyLines: true,
+      dynamicTyping: true,
       transform: (value, header) => {
           if (header === "date") {
               return moment(value, "MM/DD/YYYY");
-          } else if (["create", "care", "talk", "move", "work", "read", "write"].includes(header)) {
-              let toBool = {"0": false, "1": true, "null": null, "": null};
-              return toBool[value];
           }
           return value;
       },
