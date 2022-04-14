@@ -1,10 +1,25 @@
 import type {NextPage} from 'next';
 import {usePapaParse} from 'react-papaparse';
 import moment from 'moment';
+import * as React from 'react';
+
+
+interface Day {
+  date: moment.Moment;
+  rating: number;
+  create: boolean;
+  care: boolean;
+  talk: boolean;
+  move: boolean;
+  work: boolean;
+  read: boolean;
+  write: boolean;
+};
 
 
 const HowImDoing: NextPage = () => {
   const {readRemoteFile} = usePapaParse();
+  const [days, setDays] = React.useState<Day[]>([]);
 
   const handleReadRemoteFile = () => {
     readRemoteFile('/data/days-fixed.csv', {
@@ -18,7 +33,10 @@ const HowImDoing: NextPage = () => {
           }
           return value;
       },
-      complete: (results) => {console.debug(results)},
+      complete: (results) => {
+        const resultDays = results.data.map(day => day as Day);
+        setDays(resultDays);
+      },
     });
   };
 
