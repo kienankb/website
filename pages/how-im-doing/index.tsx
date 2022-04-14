@@ -3,6 +3,8 @@ import {usePapaParse} from 'react-papaparse';
 import moment from 'moment';
 import * as React from 'react';
 
+import styles from '../../components/styles/HowImDoing.module.css';
+
 
 interface Day {
   date: moment.Moment;
@@ -41,7 +43,20 @@ const HowImDoing: NextPage = () => {
 
   React.useEffect(loadDayDataFromCSV, []);
 
-  return <div>blah</div>;
+  const ratingToColorMap = [
+    "#999999",
+    "#000000",
+    "#FF0000",
+    "#FFA500",
+    "#00FF00",
+    "#1E90FF"
+  ];
+
+  return <div className={styles.linearContainer}>
+    {days.map(day => {
+      return <div title={day.date.format("MM/DD/YYYY")} className={styles.linearDay} style={{backgroundColor: ratingToColorMap[day.rating]}}></div>
+    })}
+  </div>;
 }
 
 export default HowImDoing
