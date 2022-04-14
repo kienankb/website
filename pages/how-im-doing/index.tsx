@@ -39,7 +39,7 @@ const HowImDoing: NextPage = () => {
     });
   };
 
-  React.useEffect(loadDayDataFromCSV);
+  React.useEffect(loadDayDataFromCSV, []);
 
   return <div>blah</div>;
 }
