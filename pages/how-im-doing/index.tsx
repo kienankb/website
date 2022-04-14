@@ -54,7 +54,8 @@ const HowImDoing: NextPage = () => {
 
   return <div className={styles.linearContainer}>
     {days.map(day => {
-      return <div title={day.date.format("MM/DD/YYYY")} className={styles.linearDay} style={{backgroundColor: ratingToColorMap[day.rating]}}></div>
+      const dateLabel = day.date.format("MM/DD/YYYY");
+      return <div key={dateLabel} title={dateLabel} className={styles.linearDay} style={{backgroundColor: ratingToColorMap[day.rating]}}></div>
     })}
   </div>;
 }
