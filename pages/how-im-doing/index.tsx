@@ -16,12 +16,11 @@ interface Day {
   write: boolean;
 };
 
-
 const HowImDoing: NextPage = () => {
   const {readRemoteFile} = usePapaParse();
   const [days, setDays] = React.useState<Day[]>([]);
 
-  const handleReadRemoteFile = () => {
+  const loadDayDataFromCSV = () => {
     readRemoteFile('/data/days-fixed.csv', {
       header: true,
       download: true,
@@ -40,7 +39,9 @@ const HowImDoing: NextPage = () => {
     });
   };
 
-  return <button onClick={handleReadRemoteFile}>load data</button>;
+  React.useEffect(loadDayDataFromCSV);
+
+  return <div>blah</div>;
 }
 
 export default HowImDoing
