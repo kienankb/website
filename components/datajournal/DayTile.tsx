@@ -1,13 +1,17 @@
 import styles from '../styles/DataJournal.module.css';
 
-const ratingToColorMap = [
-  "#999999",
-  "#000000",
-  "#FF0000",
-  "#FFA500",
-  "#00FF00",
-  "#1E90FF"
-];
+const getColorFromRating = (rating: number) => {
+  const ratingToColorMap = [
+    "#999999",
+    "#000000",
+    "#FF0000",
+    "#FFA500",
+    "#00FF00",
+    "#1E90FF"
+  ];
+
+  return ratingToColorMap[rating] ?? ratingToColorMap[0];
+}
 
 interface Day {
   date: moment.Moment;
@@ -30,7 +34,7 @@ const DaySlice = ({day}: DaySliceProps) => {
   return <div
     title={dateLabel}
     className={styles.daySlice}
-    style={{backgroundColor: ratingToColorMap[day.rating]}}>
+    style={{backgroundColor: getColorFromRating(day.rating)}}>
   </div>
 }
 
@@ -39,7 +43,11 @@ type DayTileProps = {
 }
 
 const DayTile = ({day}: DayTileProps) => {
-  return <div className={styles.dayTile} style={{backgroundColor: ratingToColorMap[day.rating]}}></div>;
+  return <div
+    title={day.date.format("MM/DD/YYYY")}
+    className={styles.dayTile}
+    style={{backgroundColor: getColorFromRating(day.rating)}}
+    ></div>;
 }
 
 type DayGridProps = {
@@ -54,7 +62,7 @@ const DayGrid = ({days}: DayGridProps) => {
   days.forEach((day) => {
     if (day.date.month() !== currentMonth) {
       daysByMonth.push(tempMonthsDays);
-      tempMonthsDays = [];
+      tempMonthsDays = [day];
     } else {
       tempMonthsDays.push(day);
     }
@@ -63,12 +71,20 @@ const DayGrid = ({days}: DayGridProps) => {
   // don't forget about the last month
   daysByMonth.push(tempMonthsDays);
 
+  if (!days || !days.length) {
+    return <div>loading...</div>
+  }
+
   return <div>
     {daysByMonth.map(month => {
-      return <div key={month[0].date.month()} className={styles.gridMonthRow}>
-        <span>{month[0].date.format("MMMM YYYY")}</span>
+      return <div key={`${month[0].date.year()}-${month[0].date.month()}`} className={styles.gridMonthRow}>
+        <span className={styles.gridMonthDay}>{month[0].date.format("MM/YY")}</span>
         {month.map(day => {
-          return <span key={day.date.month()} className={styles.gridMonthDay}>
+          return <span
+            key={day.date.date()}
+            className={styles.gridMonthDay}
+            style={{gridColumnStart: day.date.date()+1}}
+          >
             <DayTile day={day} />
           </span>
         })}

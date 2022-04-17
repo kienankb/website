@@ -15,7 +15,8 @@
 }
 
 .gridMonthRow {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(32, 1fr);
 }
 
 .gridMonthDay {
