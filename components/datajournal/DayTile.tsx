@@ -28,7 +28,6 @@ type DaySliceProps = {
 const DaySlice = ({day}: DaySliceProps) => {
   const dateLabel = day.date.format("MM/DD/YYYY");
   return <div
-    key={dateLabel}
     title={dateLabel}
     className={styles.daySlice}
     style={{backgroundColor: ratingToColorMap[day.rating]}}>
