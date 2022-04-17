@@ -59,8 +59,17 @@ a {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Rubik';
+  font-family: 'Staatliches';
   font-weight: 400;
+  margin: unset;
+}
+
+h1 {
+  font-size: 64px;
+}
+
+h2 {
+  font-size: 42px;
 }
 
 p {
