@@ -65,7 +65,7 @@ const HowImDoing: NextPage = () => {
       })}
     </div>
     <header className={styles.headerContainer}>
-      <h1>So How Have You Been?</h1>
+      <h1>So...How Have You Been?</h1>
       <h2>a makeshift journal</h2>
     </header>
   </>;
