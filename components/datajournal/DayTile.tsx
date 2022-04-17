@@ -60,6 +60,8 @@ const DayGrid = ({days}: DayGridProps) => {
     }
     currentMonth = day.date.month();
   });
+  // don't forget about the last month
+  daysByMonth.push(tempMonthsDays);
 
   return <div>
     {daysByMonth.map(month => {
