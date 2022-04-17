@@ -52,6 +52,7 @@ body {
   margin: 0;
   color: var(--fg);
   background-color: var(--bg);
+  transition: color .2s ease, background-color .2s ease;
 }
 
 a {
