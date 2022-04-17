@@ -63,10 +63,10 @@ const DayGrid = ({days}: DayGridProps) => {
 
   return <div>
     {daysByMonth.map(month => {
-      return <div className={styles.gridMonthRow}>
+      return <div key={month[0].date.month()} className={styles.gridMonthRow}>
         <span>{month[0].date.format("MMMM YYYY")}</span>
         {month.map(day => {
-          return <span className={styles.gridMonthDay}>
+          return <span key={day.date.month()} className={styles.gridMonthDay}>
             <DayTile day={day} />
           </span>
         })}
