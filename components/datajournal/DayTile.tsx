@@ -42,5 +42,29 @@ const DayTile = () => {
 
 }
 
-export {DayTile, DaySlice};
+type DayGridProps = {
+  days: Day[],
+}
+
+const DayGrid = ({days}: DayGridProps) => {
+  let daysByMonth: Day[][] = [];
+  let tempMonthsDays: Day[] = [];
+  let currentMonth = days[0]?.date.month();
+
+  days.forEach((day) => {
+    if (day.date.month() !== currentMonth) {
+      daysByMonth.push(tempMonthsDays);
+      tempMonthsDays = [];
+    } else {
+      tempMonthsDays.push(day);
+    }
+    currentMonth = day.date.month();
+  });
+
+  console.debug(daysByMonth);
+
+  return <div></div>;
+}
+
+export {DayTile, DaySlice, DayGrid};
 export type {Day};

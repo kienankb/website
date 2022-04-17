@@ -3,7 +3,7 @@ import {usePapaParse} from 'react-papaparse';
 import moment from 'moment';
 import * as React from 'react';
 
-import {Day, DaySlice} from '../../components/datajournal/DayTile';
+import {Day, DaySlice, DayGrid} from '../../components/datajournal/DayTile';
 
 import styles from '../../components/styles/DataJournal.module.css';
 
@@ -41,6 +41,7 @@ const HowImDoing: NextPage = () => {
       <h1>So...How Have You Been?</h1>
       <h2>a makeshift journal of {days.length || "uhhhh"} days and counting</h2>
     </header>
+    <DayGrid days={days} />
   </>;
 }
 
