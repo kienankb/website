@@ -52,12 +52,20 @@ const HowImDoing: NextPage = () => {
     "#1E90FF"
   ];
 
-  return <div className={styles.linearContainer}>
-    {days.map(day => {
-      const dateLabel = day.date.format("MM/DD/YYYY");
-      return <div key={dateLabel} title={dateLabel} className={styles.linearDay} style={{backgroundColor: ratingToColorMap[day.rating]}}></div>
-    })}
-  </div>;
+  return <>
+    <div className={styles.linearContainer}>
+      {days.map(day => {
+        const dateLabel = day.date.format("MM/DD/YYYY");
+        return <div
+        key={dateLabel}
+        title={dateLabel}
+        className={styles.linearDay}
+        style={{backgroundColor: ratingToColorMap[day.rating]}}>
+        </div>
+      })}
+    </div>
+    <center><div className='constructionDomTitle'>So How Have You Been?</div></center>
+  </>;
 }
 
 export default HowImDoing
