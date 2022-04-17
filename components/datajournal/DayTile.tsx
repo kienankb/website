@@ -38,8 +38,8 @@ type DayTileProps = {
   day: Day,
 }
 
-const DayTile = () => {
-
+const DayTile = ({day}: DayTileProps) => {
+  return <div className={styles.dayTile} style={{backgroundColor: ratingToColorMap[day.rating]}}></div>;
 }
 
 type DayGridProps = {
@@ -61,9 +61,18 @@ const DayGrid = ({days}: DayGridProps) => {
     currentMonth = day.date.month();
   });
 
-  console.debug(daysByMonth);
-
-  return <div></div>;
+  return <div>
+    {daysByMonth.map(month => {
+      return <div className={styles.gridMonthRow}>
+        <span>{month[0].date.format("MMMM YYYY")}</span>
+        {month.map(day => {
+          return <span className={styles.gridMonthDay}>
+            <DayTile day={day} />
+          </span>
+        })}
+      </div>
+    })}
+  </div>;
 }
 
 export {DayTile, DaySlice, DayGrid};

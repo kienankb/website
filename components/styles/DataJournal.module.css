@@ -13,3 +13,15 @@
 .daySlice {
   flex-grow: 1;
 }
+
+.gridMonthRow {
+  display: flex;
+}
+
+.gridMonthDay {
+  flex-grow: 1;
+}
+
+.dayTile {
+  height: 30px;
+}
