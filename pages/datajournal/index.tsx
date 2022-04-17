@@ -18,6 +18,7 @@ interface Day {
   write: boolean;
 };
 
+
 const HowImDoing: NextPage = () => {
   const {readRemoteFile} = usePapaParse();
   const [days, setDays] = React.useState<Day[]>([]);
@@ -57,10 +58,10 @@ const HowImDoing: NextPage = () => {
       {days.map(day => {
         const dateLabel = day.date.format("MM/DD/YYYY");
         return <div
-        key={dateLabel}
-        title={dateLabel}
-        className={styles.linearDay}
-        style={{backgroundColor: ratingToColorMap[day.rating]}}>
+          key={dateLabel}
+          title={dateLabel}
+          className={styles.linearDay}
+          style={{backgroundColor: ratingToColorMap[day.rating]}}>
         </div>
       })}
     </div>
