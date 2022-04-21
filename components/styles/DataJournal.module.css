@@ -1,0 +1,28 @@
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sliceContainer {
+  display: flex;
+  width: 100%;
+  height: 100px;
+}
+
+.daySlice {
+  flex-grow: 1;
+}
+
+.gridMonthRow {
+  display: grid;
+  grid-template-columns: repeat(32, 1fr);
+}
+
+.gridMonthDay {
+  flex-grow: 1;
+}
+
+.dayTile {
+  height: 30px;
+}
