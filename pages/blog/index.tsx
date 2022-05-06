@@ -17,7 +17,7 @@ const BlogIndex: NextPage = () => {
       return a.publishDate < b.publishDate ? 1 : -1;
     }).map((post) => {
       return <div key={post.slug}>
-        <Link href={`blog/${post.slug}`}>{post.title}</Link>
+        <Link href={`/blog/${post.slug}`}>{post.title}</Link>
       </div>;
     })}
     </>
