@@ -82,8 +82,16 @@ p {
   box-sizing: border-box;
 }
 
-.nav {
-  font-family: 'Rubik';
+.mainColumnContent {
+  width: 700px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 768px) {
+  .mainColumnContent {
+    width: 100%;
+    padding: 5px;
+  }
 }
 
 .constructionContainer {

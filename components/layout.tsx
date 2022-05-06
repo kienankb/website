@@ -1,16 +1,17 @@
 import Link from 'next/link';
 
+import styles from './styles/NavBar.module.css';
+
 
 const NavBar = () => {
   return (
-    <>
-      <div className='nav'>
-        <Link href="/">home</Link>
-      </div>
-      <div className='nav'>
-        <Link href="/blog">blog</Link>
-      </div>
-    </>
+    <header className={styles.header}>
+      <h1>kienan</h1>
+      <nav className={styles.nav}>
+          <Link href="/"><a>home</a></Link>
+          <Link href="https://twitter.com/kienankb">twitter</Link>
+      </nav>
+    </header>
   );
 }
   
@@ -24,9 +25,11 @@ type LayoutProps = {
 const Layout = ({children}: LayoutProps) => {
   return (<>
     <NavBar />
-    <div>
-      {children}
-    </div>
+    <main>
+      <div className='mainColumnContent'>
+        {children}
+      </div>
+    </main>
   </>);
 };
     

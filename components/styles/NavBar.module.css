@@ -1,0 +1,24 @@
+.header {
+  padding: 10px;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a:not(:last-child) {
+  border-right: 1px solid var(--fg);
+}
+
+.nav a {
+  font-family: 'Rubik';
+  padding: 5px 10px 5px 10px;
+  text-decoration: none;
+  text-align: center;
+  transition: color .1s ease, background-color .1s ease;
+}
+
+.nav a:hover {
+  color: var(--bg);
+  background-color: var(--fg);
+}
