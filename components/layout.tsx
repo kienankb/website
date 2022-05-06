@@ -5,15 +5,13 @@ import styles from './styles/NavBar.module.css';
 
 const NavBar = () => {
   return (
-    <>
+    <header className={styles.header}>
       <h1>kienan</h1>
       <nav className={styles.nav}>
           <Link href="/"><a>home</a></Link>
-          <Link href="/blog"><a>blog</a></Link>
-          <Link href="/about"><a>about</a></Link>
-          <Link href="/dont"><a>contact</a></Link>
+          <Link href="https://twitter.com/kienankb">twitter</Link>
       </nav>
-    </>
+    </header>
   );
 }
   
@@ -27,9 +25,11 @@ type LayoutProps = {
 const Layout = ({children}: LayoutProps) => {
   return (<>
     <NavBar />
-    <div className='mainColumnContent'>
-      {children}
-    </div>
+    <main>
+      <div className='mainColumnContent'>
+        {children}
+      </div>
+    </main>
   </>);
 };
     
