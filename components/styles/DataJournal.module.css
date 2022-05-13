@@ -18,6 +18,14 @@
 .gridMonthRow {
   display: grid;
   grid-template-columns: repeat(32, 1fr);
+  margin-bottom: 4px;
+  margin-top: 4px;
+}
+
+.gridMonthLabel {
+  font-family: 'Rubik';
+  align-items: center;
+  width: 50px;
 }
 
 .gridMonthDay {
@@ -25,5 +33,7 @@
 }
 
 .dayTile {
-  height: 30px;
+  height: 0;
+  width: 80%;
+  padding-bottom: 80%;
 }

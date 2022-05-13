@@ -78,7 +78,7 @@ const DayGrid = ({days}: DayGridProps) => {
   return <div>
     {daysByMonth.map(month => {
       return <div key={`${month[0].date.year()}-${month[0].date.month()}`} className={styles.gridMonthRow}>
-        <span className={styles.gridMonthDay}>{month[0].date.format("MM/YY")}</span>
+        <span className={styles.gridMonthLabel}>{month[0].date.format("MM/YY")}</span>
         {month.map(day => {
           return <span
             key={day.date.date()}
