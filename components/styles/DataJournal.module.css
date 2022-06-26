@@ -5,6 +5,10 @@
   text-align: center;
 }
 
+.legend {
+  font-family: 'Rubik';
+}
+
 .sliceContainer {
   display: flex;
   width: 100%;
