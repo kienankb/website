@@ -15,7 +15,6 @@ const Index: NextPage = () => {
       <meta name="description" content="He's just zis guy, you know" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <div>posts!</div>
     {BlogPosts.sort((a, b) => {
       return a.publishDate < b.publishDate ? 1 : -1;
     }).map((post) => <BlogCard key={post.slug} post={post} />)}
