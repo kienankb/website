@@ -18,7 +18,7 @@ const Index: NextPage = () => {
     <div>posts!</div>
     {BlogPosts.sort((a, b) => {
       return a.publishDate < b.publishDate ? 1 : -1;
-    }).map((post) => <BlogCard post={post} />)}
+    }).map((post) => <BlogCard key={post.slug} post={post} />)}
     </>
   </Layout>;
 }
