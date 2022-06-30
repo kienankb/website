@@ -45,7 +45,7 @@ const HowImDoing: NextPage = () => {
     <header className={styles.headerContainer}>
       <h1>How Have You Been?</h1>
       <h2>a makeshift journal of {days.length || "uhhhh"} days and counting</h2>
-      <div className={styles.legend}>black = awful, red = bad, orange = okay, green = good, blue = great</div>
+      <div className={styles.legend}>black = near-catatonic, red = bad, orange = okay, green = good, blue = great</div>
     </header>
     <DayGrid days={days} />
   </>;
