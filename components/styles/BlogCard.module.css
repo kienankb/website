@@ -1,0 +1,18 @@
+.card {
+  width: 100%;
+  padding: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border: 1px solid gray;
+}
+
+.title {
+  font-family: 'Staatliches';
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.date {
+  font-family: 'Rubik';
+  font-style: italic;
+}
