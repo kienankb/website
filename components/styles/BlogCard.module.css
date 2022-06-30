@@ -3,6 +3,7 @@
   padding: 20px;
   cursor: pointer;
   margin-bottom: 20px;
+  border: 1px solid gray;
 }
 
 .title {
