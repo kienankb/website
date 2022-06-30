@@ -10,6 +10,7 @@ const NavBar = () => {
       <nav className={styles.nav}>
           <Link href="/"><a>home</a></Link>
           <Link href="https://twitter.com/kienankb">twitter</Link>
+          <Link href="/datajournal/">data journal</Link>
       </nav>
     </header>
   );
