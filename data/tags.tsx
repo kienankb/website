@@ -1,4 +1,4 @@
-import {FaUserClock, FaHeart, FaPenNib} from 'react-icons/fa';
+import {FaUserClock, FaHeartbeat, FaPenNib} from 'react-icons/fa';
 
 
 export interface TagData {
@@ -15,7 +15,7 @@ export const Tags: TagData[] = [
     },
     {
         name: 'reflective',
-        icon: <FaHeart
+        icon: <FaHeartbeat
             color='green'
             title='reflective' />,
     },
