@@ -12,7 +12,7 @@ type BlogCardTagPanelProps = {
 
 const BlogCardTagPanel = ({tags}: BlogCardTagPanelProps) => {
   return <span className={styles.tagIcons}>
-    {tags.map((tag) => <span className={styles.tagIcon}>{Tags.find((tagEntry) => tagEntry.name === tag)?.icon}</span>)}
+    {tags.map((tag) => <span key={tag} className={styles.tagIcon}>{Tags.find((tagEntry) => tagEntry.name === tag)?.icon}</span>)}
   </span>;
 }
 
