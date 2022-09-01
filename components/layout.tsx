@@ -9,8 +9,9 @@ const NavBar = () => {
       <h1>kienan</h1>
       <nav className={styles.nav}>
           <Link href="/"><a>home</a></Link>
-          <Link href="https://twitter.com/kienankb">twitter</Link>
           <Link href="/datajournal/">data journal</Link>
+          <Link href="https://twitter.com/kienankb">twitter</Link>
+          <Link href="https://github.com/kienankb">github</Link>
       </nav>
     </header>
   );
