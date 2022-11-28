@@ -1,3 +1,15 @@
+.tagSelector {
+  font-family: 'Rubik';
+  padding: 5px;
+}
+
+.tagSelectorChoice {
+  padding-left: 2px;
+  padding-right: 2px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .card {
   width: 100%;
   padding: 20px;

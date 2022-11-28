@@ -21,7 +21,7 @@ type BlogCardProps = {
 };
 
 const BlogCard = ({post}: BlogCardProps) => {
-  return <Link href={`/blog/${post.slug}/`}>
+  return <Link passHref href={`/blog/${post.slug}/`}>
     <div className={styles.card}>
       <span className={styles.metadata}>
         <div className={styles.title}>{post.title}</div>
