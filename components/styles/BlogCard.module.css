@@ -22,11 +22,7 @@
   font-style: italic;
 }
 
-.tagIcons {
-  flex-shrink: 1;
-  font-size: 36px;;
-}
-
-.tagIcon {
-  padding: 5px;
+.tagGroup {
+  font-family: 'Rubik';
+  font-size: 12px;
 }
