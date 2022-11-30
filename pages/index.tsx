@@ -21,7 +21,7 @@ const Index: NextPage = () => {
       <meta name="description" content="He's just zis guy, you know" />
       <link rel="icon" href="/favicon.ico" />
     </Head>
-    <div className={styles.tagSelector}>by tag: <span key='all' className={styles.tagSelectorChoice} onClick={() => setSelectedTag(null)}>all</span>{Tags.map(tag => <span key={tag.name} className={styles.tagSelectorChoice} onClick={() => setSelectedTag(tag.name)}>{tag.name}</span>)}</div>
+    <div className={styles.tagSelector}>tags: <span key='all' className={styles.tagSelectorChoice} onClick={() => setSelectedTag(null)}>all</span>{Tags.map(tag => <span key={tag.name} className={styles.tagSelectorChoice} onClick={() => setSelectedTag(tag.name)}>{tag.name}</span>)}</div>
     {BlogPosts.filter((post) => {
       return selectedTag === null || post.tagNames.includes(selectedTag);
     }).sort((a, b) => {
