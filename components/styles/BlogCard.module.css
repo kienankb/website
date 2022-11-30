@@ -1,3 +1,15 @@
+.tagSelector {
+  font-family: 'Bitter';
+  padding: 5px;
+}
+
+.tagSelectorChoice {
+  padding-left: 2px;
+  padding-right: 2px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
 .card {
   width: 100%;
   padding: 20px;
@@ -18,15 +30,11 @@
 }
 
 .date {
-  font-family: 'Rubik';
+  font-family: 'Bitter';
   font-style: italic;
 }
 
-.tagIcons {
-  flex-shrink: 1;
-  font-size: 36px;;
-}
-
-.tagIcon {
-  padding: 5px;
+.tagGroup {
+  font-family: 'Bitter';
+  font-size: 12px;
 }

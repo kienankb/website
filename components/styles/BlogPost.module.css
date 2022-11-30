@@ -9,3 +9,7 @@
 .blogContent hr {
   border: 1px dashed var(--fg);
 }
+
+.blogContent .date {
+  font-family: 'Bitter';
+}

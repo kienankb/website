@@ -25,7 +25,7 @@ const BlogPost = ({slug}: BlogPostProps) => {
     </Head>
     <div className={styles.blogContent}>
       <h1>{postMetadata?.title}</h1>
-      <em>{postMetadata?.publishDate.toLocaleDateString('en-us', {month: 'short', day: 'numeric', year: 'numeric'})}</em>
+      <em className={styles.date}>{postMetadata?.publishDate.toLocaleDateString('en-us', {month: 'short', day: 'numeric', year: 'numeric'})} [{postMetadata.tagNames.join(', ')}]</em>
       <hr />
       {postMetadata?.content}
     </div>
