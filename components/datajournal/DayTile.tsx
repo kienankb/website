@@ -3,11 +3,11 @@ import styles from '../styles/DataJournal.module.css';
 const getColorFromRating = (rating: number) => {
   const ratingToColorMap = [
     "#999999",
-    "#000000",
-    "#FF0000",
-    "#FFA500",
-    "#00FF00",
-    "#1E90FF"
+    "#23364c",
+    "#6D597A",
+    "#B56576",
+    "#E56B65",
+    "#EAAC8B"
   ];
 
   return ratingToColorMap[rating] ?? ratingToColorMap[0];
