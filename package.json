@@ -10,6 +10,7 @@
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",
     "@next/mdx": "^12.3.4",
+    "d3": "^7.8.4",
     "moment": "^2.29.4",
     "next": "^12.3.4",
     "react": "17.0.2",
