@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  display: flex;
+  font-family: monospace;
+  background: black;
+  color: #d8dee9;
+}
+#root {
+  width: 100%;
+}
