@@ -2,9 +2,11 @@
   margin: 0;
   padding: 0;
 }
+
 html {
   height: 100%;
 }
+
 body {
   height: 100%;
   display: flex;
@@ -12,6 +14,19 @@ body {
   background: black;
   color: #d8dee9;
 }
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #root {
   width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
