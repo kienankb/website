@@ -5,7 +5,7 @@ import styles from './Header.module.scss';
 const Header = () => {
   return <header className={styles.header}>
     <nav style={{flex: 1}}>
-      <span>kienan</span>
+      <span className={styles.title}>kienan</span>
     </nav>
     <Logo/>
   </header>;
