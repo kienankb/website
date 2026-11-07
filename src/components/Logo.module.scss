@@ -2,7 +2,8 @@
   flex-basis: 0;
   font-family: monospace;
   white-space: pre;
-  color: #d8dee9;
+  color: var(--fg-color-bold);
   font-size: .5rem;
+  font-weight: bold;
   cursor: help;
 }

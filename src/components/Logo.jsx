@@ -15,9 +15,16 @@ const Logo = () => {
     `     \\__\\/         \\__\\/         \\__\\/    `,
   ];
 
-  return <div className={styles.logo}>
-    {figlet.map(line => <div>{line}</div>)}
-  </div>
+  return (
+    <div
+      role='img'
+      title='KKB'
+      aria-label='the text kkb rendered with an ASCII art font'
+      className={styles.logo}
+    >
+      {figlet.map((line, idx) => <div key={idx}>{line}</div>)}
+    </div>
+  )
 }
 
 export default Logo;

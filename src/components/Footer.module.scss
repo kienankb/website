@@ -1,0 +1,19 @@
+.footer {
+  display: flex;
+  margin: 0 40px;
+  padding: 40px 0;
+  justify-content: flex-end;
+  gap: 1ch;
+  border-top: 1px dashed var(--fg-color);
+}
+
+@media screen and (max-width: 80ch) {
+  .footer {
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+
+  a {
+    margin-left: 2ch;
+  }
+}

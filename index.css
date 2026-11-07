@@ -1,17 +1,39 @@
+:root {
+  color-scheme: light dark;
+  --fg-color: light-dark(black, #ddddd4);
+  --fg-color-bold: light-dark(black, white);
+  --bg-color: light-dark(#d8dee9, black);
+}
+
 * {
   margin: 0;
   padding: 0;
 }
+
 html {
   height: 100%;
 }
+
 body {
   height: 100%;
   display: flex;
   font-family: monospace;
-  background: black;
-  color: #d8dee9;
+  background: var(--bg-color);
+  color: var(--fg-color);
 }
+
+a {
+  color: var(--fg-color-bold);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #root {
   width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 }
